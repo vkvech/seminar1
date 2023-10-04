@@ -1,36 +1,37 @@
-var history =  document.getElementById("rada");
-var vypis = document.getElementById("vypis");
-
 function smajlik()//emoji je přímo zadané do elementu 
 {
-    vypis.innerHTML="😊";
-    history.innerHTML+="😊";
+    let history =  document.getElementById("rada"); //deklarace proměné history, abych furt nemusel psát document...
+    let vypis = document.getElementById("vypis");
+
+    vypis.innerHTML="😊"; // vypis (to co jsme deklarovali).innerHTML to co se má vypsat do elementu, který je v HTML
+    history.innerHTML+="😊"; // += přidává k jíž existujicímu kontentu v daném elementu
 }
 
-function srdce()//emoji je v promněné 
+
+function srdce()//emoji je přímo zadané do elementu 
 {
-    let emoji="❤";
-    
-    history.innerHTML+="❤";
+    let history =  document.getElementById("rada");
+    let vypis = document.getElementById("vypis");
+    let emoji="❤"; //zde je deklarované srdíčko do proměné emoji
 
-    document.getElementById("vypis").innerHTML=emoji;
-
+    vypis.innerHTML=emoji;
+    history.innerHTML+=emoji;
 }
 
-function palec()
+function palec()//emoji je přímo zadané do elementu 
 {
-    let emoji= document.getElementById("palec1").innerHTML;
-    document.getElementById("vypis").innerHTML=emoji;
+    let history =  document.getElementById("rada");
+    let vypis = document.getElementById("vypis");
+    let emoji="👍"; //zde je deklarované srdíčko do proměné emoji
 
-
-history.innerHTML+=emoji;
+    vypis.innerHTML=emoji;
+    history.innerHTML+=emoji;
 }
 
 function univerzalni(emoji) 
 {
-document.getElementById("vypis").innerHTML=emoji;
-document.getElementById("rada").innerHTML+=emoji;
-
+    document.getElementById("vypis").innerHTML=emoji;
+    document.getElementById("rada").innerHTML+=emoji;
 }
 
 function pridat()
